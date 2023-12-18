@@ -1,0 +1,586 @@
+/*-- Reset --*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/*-- Variables --*/
+:root {
+    --clr-red: #6e0000;
+    --clr-white: #ffffff;
+    --clr-footer: #8a0101;
+    --clr-lightred: #fe4b4b;
+}
+
+/* font */
+
+@font-face{font-family:futura std;font-style:normal;font-weight:400;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdBook.woff) format('woff')}@font-face{font-family:futura std;font-style:italic;font-weight:400;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdBookOblique.woff) format('woff')}@font-face{font-family:futura std;font-style:normal;font-weight:300;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdCondensedLight.woff) format('woff')}@font-face{font-family:futura std;font-style:normal;font-weight:300;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdLight.woff) format('woff')}@font-face{font-family:futura std;font-style:italic;font-weight:300;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdCondensedLightObl.woff) format('woff')}@font-face{font-family:futura std;font-style:italic;font-weight:300;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdLightOblique.woff) format('woff')}@font-face{font-family:futura std;font-style:normal;font-weight:500;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdCondensed.woff) format('woff')}@font-face{font-family:futura std;font-style:normal;font-weight:500;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdMedium.woff) format('woff')}@font-face{font-family:futura std;font-style:italic;font-weight:500;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdCondensedOblique.woff) format('woff')}@font-face{font-family:futura std;font-style:italic;font-weight:500;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdMediumOblique.woff) format('woff')}@font-face{font-family:futura std;font-style:normal;font-weight:650;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdHeavy.woff) format('woff')}@font-face{font-family:futura std;font-style:italic;font-weight:650;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdHeavyOblique.woff) format('woff')}@font-face{font-family:futura std;font-style:normal;font-weight:700;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdBold.woff) format('woff')}@font-face{font-family:futura std;font-style:normal;font-weight:700;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdCondensedBold.woff) format('woff')}@font-face{font-family:futura std;font-style:italic;font-weight:700;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdBoldOblique.woff) format('woff')}@font-face{font-family:futura std;font-style:italic;font-weight:700;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdCondensedBoldObl.woff) format('woff')}@font-face{font-family:futura std;font-style:normal;font-weight:750;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdCondensedExtraBd.woff) format('woff')}@font-face{font-family:futura std;font-style:normal;font-weight:750;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdExtraBold.woff) format('woff')}@font-face{font-family:futura std;font-style:italic;font-weight:750;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdCondExtraBoldObl.woff) format('woff')}@font-face{font-family:futura std;font-style:italic;font-weight:750;src:local('Futura Std'),url(https://fonts.cdnfonts.com/s/30938/FuturaStdExtraBoldOblique.woff) format('woff')}
+
+/*-- General styling --*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    background-color: white;
+    color: var(--clr-red);
+    margin-top: 36%;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-red);
+}
+
+h1,
+h2 {
+    font-weight: 400;
+    font-family: 'Futura Std', sans-serif;   
+    text-align: center;                                        
+}
+
+h3 {
+    font-weight: 400;
+}
+
+/*-- error page styling --*/
+
+.errorpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em 1em 5 1em;
+}
+
+.errorpage h1 {
+    font-size: 3em;
+    color: #d80000;
+}
+
+.errorpage p {
+    margin-top: 2em;
+    font-size: 1.5rem;
+    color: #d80000;
+    margin-bottom: 2em;
+    text-align: center;
+    max-width: 80%;
+}
+
+.errorpage img {
+    max-width: 80%;
+    margin-top: 4em;
+    margin: auto;
+}
+
+.cointainer {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/*-- Header og tilhørende @media --*/
+.topnav {
+    overflow: hidden;
+    background-color: #6e0000;
+    padding: 1rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.logo-topnav {
+    width: 100px;
+    display: block;
+    padding-right: 1rem;
+    position: relative;
+}
+
+.header__icons {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.icon {
+    width: 2rem;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: var(--clr-lightred);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: auto;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--clr-footer);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: var(--clr-white);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+    background-color: var(--clr-footer);
+    color: var(--clr-white);
+}
+
+.dropdown-content a:hover {
+    color: #d80000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header__search,
+.header__shopping {
+    width: 2.5rem;
+    margin-top: 2.5%;
+    margin-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .topnav a:not(:first-child),
+    .dropdown .dropbtn, 
+    .topnav .header__search {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .header__icons {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a, 
+    .topnav.topnav.responsive .header__search {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav.responsive .dropdown {
+        float: none;
+    }
+
+    .topnav.responsive .dropdown-content {
+        position: relative;
+    }
+
+    .topnav.responsive .dropdown .dropbtn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/*-- Buttons --*/
+
+.hero__button {
+    background-color: var(--clr-red);
+    width: 15em;
+    border: 2px solid var(--clr-red);
+    padding: 0.3em 2em;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: var(--clr-lightred);
+}
+
+.hero__button:hover {
+    background-color: transparent;
+    color: var(--clr-red);
+}
+
+.hero__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+/*-- Footer --*/
+.footer__menu {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: var(--clr-red);
+    padding: 0.5rem;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.footer__some {
+    width: 3.5rem;
+    padding: 0.3rem;
+}
+
+.footer__somegruppe {
+    display: flex;
+    flex-direction: row;
+    margin: 0.6em;
+}
+
+.footer__text {
+    color: var(--clr-lightred);
+    padding: 2%;
+}
+
+footer {
+    display: block;
+}
+
+.footercontainer__some {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Main i Index fil */
+.bigphoto {
+    width: 100%;
+}
+
+.main__index {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__index h3, h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.h2 {
+   font-weight: bold;
+}
+
+.main__index img {
+    display: flex;
+    align-items: center;
+}
+
+/* underside om */
+
+.container__om h2 {
+    text-align: center;
+    font-size: x-large;
+}
+
+.container__om h3 {
+    text-align: center;
+    font-size: large;
+    margin-top: 2rem;
+}
+
+.img__daaseom {
+    padding-left: 2%;
+}
+
+.main__om {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.main__om h1 {
+    font-size: 320%;
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
+.main__om p {
+    max-width: 80%;
+    margin: 2rem;
+}
+
+#logo__om {
+    max-width: 80%;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+/* underside hvorfor */
+.main__hvorfor h1 {
+    margin-top: -50%;
+    font-size: x-large;
+    color: var(--clr-white);
+    margin-bottom: 35%;
+}
+
+.main__hvorfor p {
+    max-width: 80%;
+    margin: 2rem;
+}
+
+#img__hvorfor1 {
+    width: 100%;
+}
+
+#img__hvorfor2 {
+    max-width: 80%;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* underside daase */
+.main__daase h3 {
+    text-align: center;
+    padding: 0.5rem 0 2rem 0;
+}
+
+.main__daase h2 {
+    padding-top: 2rem;
+}
+
+/*-- Large desktop --*/
+@media screen and (min-width: 1280px) {
+    
+    /* header */
+
+    .container {
+        max-width: 100%;
+    }
+
+    .topnav img {
+        width: 170px;
+    }
+
+    .footer__links {
+        font-size: 1em;
+    }
+
+    /* errorpage */
+
+    .errorpage p {
+        max-width: 30%;
+    }
+
+    .errorpage img {
+        width: 50%;
+    }
+
+    /* Forside */
+
+    .main__index {
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .main__index div {
+        max-width: 50%;
+    }
+
+    .main__index h3 {
+        font-size: 135%;
+    }
+
+    /* Footer */
+
+    .footer__menu {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .footer__some {
+        padding: 0 0.5rem;
+    }
+
+    .footer__text {
+        margin-right: 4rem;
+    }
+
+    body {
+        margin-top: 7%;
+    }
+
+    /* underside om */
+
+    #logo__om {
+        width: 30%;
+    }
+
+    #top__infoom {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 2.5rem 0rem;
+    }
+
+    .main__om h1 {
+        font-size: 500%;
+        padding-right: 17rem;
+    }
+
+    .main__om h2, h3 {
+        font-size: xx-large;
+    }
+
+    .main__om p {
+        max-width: 60%;
+        font-size: large;
+        margin: 0 auto;
+        width: fit-content;
+        padding: 2rem 0 3rem 0;
+    }
+
+    #container__favorit {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #info__favorit {
+        margin-left: -20%;
+        margin-top: 5rem;
+    }
+
+    .container__om {
+        margin: 3rem 0;
+    }
+
+    .img__daaseom {
+        width: 53%;
+    }
+
+    /* underside hvorfor */
+
+    .main__hvorfor p {
+        max-width: 60%;
+        font-size: large;
+        margin: 0 auto;
+        width: fit-content;
+        padding: 2rem 0 5rem 0;
+    }
+
+    .main__hvorfor h1 {
+        font-size: 600%;
+        margin-top: -45%;
+        margin-bottom: 35%;
+    }
+
+    #img__hvorfor2 {
+        width: 30%;
+        margin: auto;
+        margin-bottom: 6rem;
+    }
+
+    .main__hvorfor h2 {
+        margin-bottom: 0.5rem;
+    }
+
+    /* underside daase */
+
+    .main__daase h2 {
+        justify-content: start;
+        font-size: 180%;
+        margin-left: 3rem;
+    }
+
+    .main__daase h3 {
+        font-size: 100%;
+    }
+
+    .rows {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main__daase {
+        margin-top: 10rem;
+    }
+    
+}
